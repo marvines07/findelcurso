@@ -1,0 +1,189 @@
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+
+
+    flex-direction: column;
+    align-items: center;
+}
+
+header{
+    width: 100%; /*ocupa todo el ancho*/
+    background-color: #ff6f61;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+}
+#neon-text{
+    font-size: 3em;
+    font-weight: bold;
+    color: #fff;
+    text-shadow:
+    0 0 5px #00ffff,
+    0 0 10npx #00ffff,
+    0 0 20px #00ffff;
+    transition: text-shadow 0.3s ease-in-out;
+
+}
+nav{
+    width: 100%;
+    background-color: #333;
+}
+nav ul{
+    display: flex;
+    justify-content: space-around; /*distribucion uniforme*/
+    margin: 0;
+    padding: 10px;
+    list-style: none;
+}
+nav ul li a{
+    text-decoration: none; /* sin subrayado*/
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+nav ul li a:hover{
+    color: #ff6f61;
+}
+
+
+main{
+    width: 95%;
+    max-width: 2000px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+    background-color: #a281cc;
+    padding: 2rem;
+    color: #333;
+    text-align: center;
+}
+
+main.overlay{
+    background-color: transparent;
+    padding: 2rem;
+    border-radius: 8px;
+}
+/*secciones de cuadros*/
+.history, .products{
+    background-color: #b898f3;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba (0, 0, 0, 0.1);
+}
+.history h2, .products h2{
+    margin-top: 0;
+    color: #333;
+    text-align: center;
+}
+.history p, .products p, .products ul{
+    text-align: center;
+    font-size: 1rem;
+    color: #555;
+}
+.products ul{
+    list-style: none;
+    padding: 0;
+}
+.products ul li{
+    padding: 5px 0;
+}
+.destacado{
+    font-weight: bold;
+    font-size: 2.5em;
+    color: white;
+}
+.mapa-ubicaion{
+    display: block; /* Para que se comporte como un bloque y se pueda centrar */
+    margin: 10px auto; /* Margen automático a izquierda y derecha para centrar */
+    max-width: 100%; /* Para que la imagen no se salga del contenedor */
+    height: auto; /* Para mantener la proporción de la imagen */
+    border-radius: 8px; /*Bordes redondeados como los cuadros*/
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+/* carrusel */
+.carousel{
+    margin: 2rem auto;
+    position: relative;
+    width: 600px;
+    overflow: hidden;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    
+}
+.carousel-images{
+    display: flex;
+    transition: transform 4s ease-in-out;
+}
+.carousel-images img{
+    width: 600px;
+    height: 300px;
+    object-fit: cover;
+}
+/* botones */
+button{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%;
+}
+button.prev {
+    left: 10px;
+
+}
+button.next{
+    right: 10px;
+
+}
+button:hover{
+    background-color: black;
+}
+footer{
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+    width: 100%;
+    left: 0;
+}
+.footer-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem  
+
+}
+.footer-info p {
+    margin: 0.3rem 0;
+    font-size: 0.9rem;
+
+}
+.footer-social a{
+    color: #ffccbc;
+    text-decoration: none;
+    margin: 0 0.5rem;
+    font-weight: bold;
+
+}
+.footer-social a: hover{
+    text-decoration: underline;
+    color: #ffab91;
+}
